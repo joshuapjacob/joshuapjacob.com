@@ -1,27 +1,34 @@
 <template>
   <div id="main">
-    <Header/>
-    <div class="marquee">
-      <div class="track">
-        <div class="content">&nbsp;Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence Infinite Marquee with long sentence</div>
-      </div>
-    </div>
-    <!-- <Landing/>
-    <About/>
-    <Projects/>
-    <Now/>
-    <Contact/> -->
+    <!-- <Header/> -->
+    <LandingSection/>
+    <AboutSection/>
+    <ProjectHighlightsSection/>
+    <NowSection/>
+    <ContactSection/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Header from './components/base/Header.vue'
-// import Projects from './components/Projects.vue'
+// import Header from './components/base/Header.vue'
+import LandingSection from './components/sections/LandingSection.vue'
+import AboutSection from './components/sections/AboutSection.vue'
+import ProjectHighlightsSection from './components/sections/ProjectHighlightsSection.vue'
+import NowSection from './components/sections/NowSection.vue'
+import ContactSection from './components/sections/ContactSection.vue'
+import Footer from './components/base/Footer.vue'
 
 export default {
   name: 'Main',
   components: {
-    Header
+    // Header,
+    LandingSection,
+    AboutSection,
+    ProjectHighlightsSection,
+    NowSection,
+    ContactSection,
+    Footer
   }
 }
 </script>
@@ -43,35 +50,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-
+/* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
-.marquee {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: 200px;
-  overflow-x: hidden;
-  opacity: 0.1;
-}
-
-.track {
-  position: absolute;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-.content {
-  color: white;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 144px;
-}
 
 </style>
