@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import UnderConstruction from "../views/UnderConstruction.vue"
+import UnderConstruction from "../views/UnderConstruction.vue";
 
 Vue.use(VueRouter);
 
