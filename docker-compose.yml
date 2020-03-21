@@ -9,17 +9,21 @@ services:
   joshuapjacob.com:
     container_name: joshuapjacob.com
     image: index.docker.io/joshuapjacob/joshuapjacob.com:latest
+    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
     volumes:
+      - ./data/nginx:/etc/nginx/conf.d
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
   # Automatically enable HTTPS by deploying Let's Encrypt certificates.
   certbot:
+    container_name: certbot
     image: certbot/certbot
+    restart: unless-stopped
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
@@ -30,6 +34,7 @@ services:
   watchtower:
     container_name: watchtower
     image: containrrr/watchtower
+    restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/joshuapjacob/.docker/config.json:/config.json
