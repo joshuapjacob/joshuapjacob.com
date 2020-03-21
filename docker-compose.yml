@@ -1,0 +1,36 @@
+# This file has to be manually loaded on my cloud server if modified.
+# curl https://github.com/joshuapjacob/joshuapjacob.com/raw/master/docker-compose.yml > init-letsencrypt
+
+version: "3"
+
+services:
+
+  # The Website
+  joshuapjacob.com:
+    container_name: joshuapjacob.com
+    image: index.docker.io/joshuapjacob/joshuapjacob.com:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  # Automatically enable HTTPS by deploying Let's Encrypt certificates.
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+  # Automatically reloads the website container if new image is available.
+  # Checks for updates on the DockerHub repo the every 5 minutes.
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/joshuapjacob/.docker/config.json:/config.json
+    command: --debug --interval 300
