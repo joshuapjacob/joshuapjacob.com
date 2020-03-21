@@ -24,4 +24,9 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
+## CI/CD
+* Master branch commit hits GitHub
+* Dockerhub builds image
+* Watchtower on my server checks for new image every 5min
+
 Nginx, Docker, Vue.js, Let's encrypt
