@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>UNDER C00NSTRUCTION</h1>
+    <h1>UNDER C0NSTRUCTION</h1>
   </div>
 </template>
 
