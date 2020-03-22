@@ -1,5 +1,4 @@
 # This file has to be manually loaded on my cloud server if modified.
-# curl -L  > docker-compose.yml
 
 version: "3"
 
@@ -13,6 +12,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - certs:/etc/letsencrypt
+      - certs-data:/data/letsencrypt
 
   # Automatically reloads the website container if new image is available.
   # Checks for updates on the DockerHub repo the every 5 minutes.
