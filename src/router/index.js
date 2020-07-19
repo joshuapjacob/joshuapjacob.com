@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import UnderConstruction from "../views/UnderConstruction.vue";
+import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -11,8 +11,8 @@ const routes = [
   },
   {
     path: "/",
-    name: "UnderConstruction",
-    component: UnderConstruction,
+    name: "Home",
+    component: Home,
   },
   {
     path: "/cv",

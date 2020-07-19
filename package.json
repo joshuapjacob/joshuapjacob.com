@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "epic-spinners": "^1.1.0",
     "vue": "^2.6.11",
+    "vue-headful": "^2.1.0",
     "vue-router": "^3.3.4"
   },
   "devDependencies": {
