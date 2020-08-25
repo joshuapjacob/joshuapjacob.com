@@ -1,5 +1,7 @@
 # joshuapjacob.com
 
+Joshua Paul Jacob's Personal Website
+
 ## Project setup
 ```
 npm install
@@ -30,3 +32,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * Watchtower on my server checks for new image every 5min
 
 Nginx, Docker, Vue.js, Let's encrypt
+
+## Credits
+- https://github.com/akella/webgl-mouseover-effects/blob/master/js/scene.js

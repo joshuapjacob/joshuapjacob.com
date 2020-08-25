@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="show" class="preloader">
+    <div v-if="show" id="preloader">
       <img src="@/assets/logo.png" alt="Joshua Paul Jacob Logo" />
       <p class="chrome">Loading...</p>
     </div>
@@ -29,12 +29,12 @@ export default {
 </script>
 
 <style scoped>
-.preloader {
+#preloader {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -47,6 +47,7 @@ img {
 
 p {
   margin-top: 1rem;
+  font-family: "Lato", sans-serif;
   color: gray;
 }
 
