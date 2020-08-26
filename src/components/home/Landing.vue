@@ -1,7 +1,9 @@
 <template>
-  <div id="landing" class="section">
+  <div id="landing">
+    <div id="darken"></div>
     <div id="canvas_container"></div>
     <div class="center">
+      <img src="@/assets/logo.png" alt="Joshua Paul Jacob Logo" />
       <div id="full_name">
         <div id="first_names" class="name">Joshua Paul</div>
         <div id="last_name" class="name">Jacob</div>
@@ -203,21 +205,28 @@ export default {
   /* background-color: black;
   background-image: url("../assets/bg.jpg"); */
   background: none;
-  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* -webkit-box-shadow: inset 0px -100px 100px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 0px -100px 100px 0px rgba(0, 0, 0, 1);
-  box-shadow: inset 0px -100px 100px 0px rgba(0, 0, 0, 1); */
   height: 100vh;
   width: 100vw;
+}
+
+#darken {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
 }
 
 #canvas_container {
   display: block;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   left: 0;
   top: 0;
 }
@@ -256,10 +265,7 @@ export default {
 img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  height: 500px;
-  -webkit-box-shadow: 25px 25px 0px 0px rgba(48, 48, 48, 1);
-  -moz-box-shadow: 25px 25px 0px 0px rgba(48, 48, 48, 1);
-  box-shadow: 25px 25px 0px 0px rgba(48, 48, 48, 1);
+  height: 50px;
   transition: 0.5s ease;
 }
 

@@ -38,7 +38,8 @@ export default {
 #burger {
   position: fixed;
   transform: translate(0, -50%) rotate(270deg);
-  right: 5%;
+  right: 0;
+  margin-right: 3vw;
   top: 50%;
   align-items: center;
   display: flex;
