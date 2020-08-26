@@ -1,6 +1,12 @@
-# joshuapjacob.com
-
-Joshua Paul Jacob's Personal Website
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/joshuapjacob/joshuapjacob.com/master/src/assets/logo.png" width="100" />
+</div>
+<h1 align="center">
+<a href="https://joshuapjacob.com" target="_blank">joshuapjacob.com</a>
+</h1>
+<p align="center">
+  Built with <a href="https://vuejs.org/" target="_blank">Vue.js</a> and hosted on <a href="https://m.do.co/c/d1712c8dc6f3" target="_blank">DigitalOcean</a>
+</p>
 
 ## Project setup
 ```
