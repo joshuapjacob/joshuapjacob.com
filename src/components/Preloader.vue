@@ -21,6 +21,7 @@ export default {
   methods: {
     toggle() {
       setTimeout(() => {
+        window.scrollTo(0, 0);
         this.show = !this.show;
       }, 2000);
     },
