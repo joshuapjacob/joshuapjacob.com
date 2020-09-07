@@ -13,6 +13,8 @@
       </transition>
       <transition name="slide">
         <div v-if="isActive" id="sidebar-panel">
+          <h2>HOME</h2>
+          <h3>ABOUT</h3>
           <h2>This menu is also under construction...</h2>
         </div>
       </transition>
@@ -35,6 +37,7 @@ export default {
 
 <style scoped>
 /* BURGER ICON -------------------------------------------------------------- */
+
 #burger {
   position: fixed;
   transform: translate(0, -50%) rotate(270deg);
@@ -57,7 +60,7 @@ button:focus {
 .burger-button {
   position: relative;
   height: 30px;
-  width: 32px;
+  width: 38px;
   display: block;
   border: 0;
   border-radius: 0;

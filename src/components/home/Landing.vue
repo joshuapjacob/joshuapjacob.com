@@ -3,10 +3,10 @@
     <div id="darken"></div>
     <div id="canvas_container"></div>
     <div class="center">
-      <img src="@/assets/logo.png" alt="Joshua Paul Jacob Logo" />
+      <!-- <img src="@/assets/logo.png" alt="Joshua Paul Jacob Logo" /> -->
       <div id="full_name">
-        <div id="first_names" class="name">Joshua Paul</div>
-        <div id="last_name" class="name">Jacob</div>
+        <div id="first_names" class="name">/ Joshua Paul</div>
+        <div id="last_name" class="name">Jacob /</div>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@ export default {
 
       const texture = new TextureLoader().load(require("@/assets/bg.jpg"));
       const mesh = new Mesh(
-        new PlaneBufferGeometry(2 * 0.6, 1.125 * 0.6),
+        new PlaneBufferGeometry(3 * 0.7, 2 * 0.7),
         new MeshBasicMaterial({ map: texture })
       );
       scene.add(mesh);
@@ -202,8 +202,6 @@ export default {
 
 <style scoped>
 #landing {
-  /* background-color: black;
-  background-image: url("../assets/bg.jpg"); */
   background: none;
   display: flex;
   align-items: center;
@@ -218,7 +216,7 @@ export default {
   z-index: -1;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100vw;
   height: 100vh;
 }
@@ -229,6 +227,12 @@ export default {
   z-index: -2;
   left: 0;
   top: 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* NAME --------------------------------------------------------------------- */
@@ -246,7 +250,7 @@ export default {
 
 .name {
   font-family: "Alata", sans-serif;
-  font-size: 8rem;
+  font-size: 9rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -255,31 +259,10 @@ export default {
   }
 }
 
-/* IMAGE -------------------------------------------------------------------- */
-
-#img_container {
-  position: relative;
-  margin: 50px 25px;
-}
+/* LOGO --------------------------------------------------------------------- */
 
 img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  height: 50px;
-  transition: 0.5s ease;
-}
-
-img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-
-#img_decoration {
-  border: 1px solid white;
-  position: absolute;
-  top: -25px;
-  left: -25px;
-  width: 400px;
-  height: 500px;
+  height: 250px;
+  margin-top: 0px;
 }
 </style>

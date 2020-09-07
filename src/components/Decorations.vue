@@ -32,28 +32,78 @@
       </div>
       <div class="vl"></div>
     </div>
+    <div id="language" @click="switchLocale" title="Change Language">
+      <span class="active" id="en">EN</span>/<span class="inactive" id="fr"
+        >FR</span
+      >
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "decorations",
+  methods: {
+    switchLocale() {
+      if (this.$i18n.locale === "en") {
+        document.querySelector("#en").classList.replace("active", "inactive");
+        this.$i18n.locale = "fr";
+        document.querySelector("#fr").classList.replace("inactive", "active");
+      } else {
+        document.querySelector("#fr").classList.replace("active", "inactive");
+        this.$i18n.locale = "en";
+        document.querySelector("#en").classList.replace("inactive", "active");
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
 #decorations {
   position: fixed;
-  left: 0;
   z-index: 10;
 }
 
 #left-decorations {
+  left: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 3vw;
+}
+
+/* LANGUAGE ----------------------------------------------------------------- */
+
+#language {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 3vw;
+  color: grey;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  transform: translateX(3px);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#language span {
+  transition: 0.3s ease;
+}
+
+#language .inactive {
+  opacity: 0.5;
+}
+
+#language:hover .inactive {
+  opacity: 1;
+  color: lightgrey;
+}
+
+#language:hover .active {
+  opacity: 0.5;
 }
 
 /* VERTICAL LINES ----------------------------------------------------------- */
