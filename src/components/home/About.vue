@@ -1,13 +1,17 @@
 <template>
   <div id="about" class="section">
-    <h2>This website is (still) under construction...</h2>
-    <a href="https://github.com/joshuapjacob/joshuapjacob.com" target="_blank">
-      &lt; Source Code /&gt;
-    </a>
-    <!-- <div id="img_container">
-      <div id="img_decoration"></div>
-      <img src="@/assets/JoshuaPaulJacob.jpg" alt="Joshua Paul Jacob" />
-    </div> -->
+    <div id="under_construction">
+      <h2>{{ $t("underConstruction.message") }}</h2>
+      <a href="https://github.com/joshuapjacob/joshuapjacob.com" target="_blank">
+        &lt; {{ $t("underConstruction.sourceCode") }} /&gt;
+      </a>
+      <!-- <div id="img_container">
+        <div id="img_decoration"></div>
+
+        who am i
+        <img src="@/assets/JoshuaPaulJacob.jpg" alt="Joshua Paul Jacob" />
+      </div> -->
+    </div>
   </div>
 </template>
 
@@ -19,13 +23,12 @@ export default {
 
 <style scoped>
 #about {
-  background-color: black;
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -42,6 +45,18 @@ a:hover {
 
 h2 {
   font-weight: normal;
+}
+
+/* UNDER CONSTRUCTION ------------------------------------------------------- */
+
+#under_construction {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
 
 /* IMAGE -------------------------------------------------------------------- */

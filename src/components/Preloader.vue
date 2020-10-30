@@ -21,6 +21,7 @@ export default {
   methods: {
     toggle() {
       setTimeout(() => {
+        window.scrollTo(0, 0);
         this.show = !this.show;
       }, 2000);
     },
@@ -39,6 +40,7 @@ export default {
   height: 100%;
   z-index: 100;
   background-color: black;
+  cursor: wait;
 }
 
 img {

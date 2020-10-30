@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" style="background-color: black">
   <img alt="Logo" src="https://raw.githubusercontent.com/joshuapjacob/joshuapjacob.com/master/src/assets/logo.png" width="100" />
 </div>
 <h1 align="center">
@@ -32,12 +32,19 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-## CI/CD
-* Master branch commit hits GitHub
-* Dockerhub builds image
-* Watchtower on my server checks for new image every 5min
+## Continuous Delivery
 
-Nginx, Docker, Vue.js, Let's encrypt
+Once changes to the master branch on the GitHub repository have been pushed/merged, [Docker Hub](https://hub.docker.com/) builds the image and stores it on a private repository. Every five minutes, the [Watchtower](https://containrrr.dev/watchtower) container on my [DigitalOcean](https://m.do.co/c/d1712c8dc6f3) web server droplet checks for a new image of my website container and updates it if available.
+
+See [joshuapjacob.com-webserver](https://github.com/joshuapjacob/joshuapjacob.com-webserver) for more info.
+
+## SSL/TLS Certificates
+
+For HTTPS, certificates are generated/renewed through the [Certbot](https://hub.docker.com/r/certbot/certbot/) container and [Let's Encrypt](https://letsencrypt.org/). [Nginx](https://www.nginx.com/) on this repository is configured to route [ACME](https://tools.ietf.org/html/rfc8555) challenges to a volume shared with the [Certbot](https://hub.docker.com/r/certbot/certbot/) container.
+
+See [joshuapjacob.com-webserver](https://github.com/joshuapjacob/joshuapjacob.com-webserver) for more info.
+
+*I just wanted that fancy lock so my website looks legit.*
 
 ## Credits
-- https://github.com/akella/webgl-mouseover-effects/blob/master/js/scene.js
+- https://github.com/akella/webgl-mouseover-effects/blob/master/js/scene.js (the cool landing section)

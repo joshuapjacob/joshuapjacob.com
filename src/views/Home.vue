@@ -5,16 +5,16 @@
       description="Joshua Paul Jacob's Website"
     />
     <preloader />
-    <customHeader />
+    <decorations />
     <customMenu />
-    <landing />
-    <about />
+    <landing class="section" />
+    <about class="section" />
   </main>
 </template>
 
 <script>
 import Preloader from "../components/Preloader.vue";
-import CustomHeader from "../components/CustomHeader.vue";
+import Decorations from "../components/Decorations.vue";
 import CustomMenu from "../components/CustomMenu.vue";
 import Landing from "../components/home/Landing.vue";
 import About from "../components/home/About.vue";
@@ -22,7 +22,7 @@ import About from "../components/home/About.vue";
 export default {
   components: {
     Preloader,
-    CustomHeader,
+    Decorations,
     CustomMenu,
     Landing,
     About,
@@ -30,8 +30,9 @@ export default {
 };
 </script>
 
-<style scoped>
-main {
+<style>
+.section {
   max-width: 1600px;
+  margin: auto;
 }
 </style>
