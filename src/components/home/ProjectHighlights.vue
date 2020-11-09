@@ -1,5 +1,3 @@
-https://codepen.io/dudleystorey/pen/knqyK
-
 <template>
   
 </template>

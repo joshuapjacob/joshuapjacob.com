@@ -12,20 +12,30 @@
       </div>
       <div class="vl"></div>
       <div id="social">
-        <a href="https://www.instagram.com/joshuapjacob/" title="Instagram"
+        <a
+          href="https://www.instagram.com/joshuapjacob/"
+          target="_blank"
+          title="Instagram"
           ><img src="@/assets/icons/instagram-brands.svg"
         /></a>
-        <a href="https://www.linkedin.com/in/joshuapjacob/" title="LinkedIn"
+        <a
+          href="https://www.linkedin.com/in/joshuapjacob/"
+          target="_blank"
+          title="LinkedIn"
           ><img src="@/assets/icons/linkedin-brands.svg"
         /></a>
-        <a href="https://github.com/joshuapjacob" title="GitHub"
+        <a href="https://github.com/joshuapjacob" target="_blank" title="GitHub"
           ><img src="@/assets/icons/github-brands.svg"
         /></a>
-        <a href="https://www.youtube.com/user/lrccomedy" title="YouTube"
+        <a
+          href="https://www.youtube.com/user/lrccomedy"
+          target="_blank"
+          title="YouTube"
           ><img src="@/assets/icons/youtube-brands.svg"
         /></a>
         <a
           href="https://www.goodreads.com/user/show/57891424-joshua-paul-jacob"
+          target="_blank"
           title="Goodreads"
           ><img src="@/assets/icons/goodreads-brands.svg"
         /></a>

@@ -2,7 +2,10 @@
   <div id="about" class="section">
     <div id="under_construction">
       <h2>{{ $t("underConstruction.message") }}</h2>
-      <a href="https://github.com/joshuapjacob/joshuapjacob.com" target="_blank">
+      <a
+        href="https://github.com/joshuapjacob/joshuapjacob.com"
+        target="_blank"
+      >
         &lt; {{ $t("underConstruction.sourceCode") }} /&gt;
       </a>
       <!-- <div id="img_container">
@@ -11,6 +14,12 @@
         who am i
         <img src="@/assets/JoshuaPaulJacob.jpg" alt="Joshua Paul Jacob" />
       </div> -->
+
+      TO INCLUDE:
+       - BIO:
+        Your education
+        Your skills and expertise
+        Your latest job or project you worked on
     </div>
   </div>
 </template>

@@ -1,6 +1,32 @@
 {
   "underConstruction": {
-      "message": "This website is (still) under construction...",
-      "sourceCode": "Source Code"
+    "message": "This website is (still) under construction...",
+    "sourceCode": "Source Code"
+  },
+  "cv" : {
+    "education": {
+      "title": "Education"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "volunteering": {
+      "title": "Volunteering"
+    },
+    "achievements-and-awards": {
+      "title": "Achievements & Awards"
+    },
+    "key-skills": {
+      "title": "Key Skills"
+    },
+    "languages": {
+      "title": "Languages"
+    },
+    "technology": {
+      "title": "Technology"
+    },
+    "interests": {
+      "title": "Interests"
+    }
   }
 }

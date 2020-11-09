@@ -9,6 +9,7 @@
     <customMenu />
     <landing class="section" />
     <about class="section" />
+    <projectHighlights class="section" />
   </main>
 </template>
 
