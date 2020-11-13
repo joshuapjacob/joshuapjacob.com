@@ -2,13 +2,7 @@
   <div id="landing">
     <div id="darken"></div>
     <div id="canvas_container"></div>
-    <div class="center">
-      <!-- <img src="@/assets/logo.png" alt="Joshua Paul Jacob Logo" /> -->
-      <div id="full_name">
-        <div id="first_names" class="name">/ Joshua Paul</div>
-        <div id="last_name" class="name">Jacob /</div>
-      </div>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -23,6 +17,7 @@ import {
   MeshBasicMaterial,
   Vector2,
   sRGBEncoding,
+  PlaneGeometry,
 } from "three";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
@@ -43,6 +38,12 @@ export default {
       speed: null,
       time: null,
     };
+  },
+  props: {
+    bg: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     init: function () {
@@ -67,6 +68,17 @@ export default {
         new MeshBasicMaterial({ map: texture })
       );
       scene.add(mesh);
+
+      if (this.$props.bg) {
+        const geometry = new PlaneGeometry(1, 1);
+        const material = new MeshBasicMaterial({
+          color: 0x000000,
+          opacity: 0.8,
+          transparent: true,
+        });
+        const plane = new Mesh(geometry, material);
+        scene.add(plane);
+      }
 
       // Post-Processing
       this.composer = new EffectComposer(this.renderer);
@@ -227,42 +239,5 @@ export default {
   z-index: -2;
   left: 0;
   top: 0;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* NAME --------------------------------------------------------------------- */
-
-#first_names {
-  -webkit-text-stroke: 1px white;
-  color: white;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-#last_name {
-  color: white;
-}
-
-.name {
-  font-family: "Alata", sans-serif;
-  font-size: 9rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .name {
-    font-size: 4rem;
-  }
-}
-
-/* LOGO --------------------------------------------------------------------- */
-
-img {
-  height: 250px;
-  margin-top: 0px;
 }
 </style>

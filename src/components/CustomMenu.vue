@@ -13,8 +13,12 @@
       </transition>
       <transition name="slide">
         <div v-if="isActive" id="sidebar-panel">
-          <h2>HOME</h2>
-          <h3>ABOUT</h3>
+          <h2><router-link to="/">HOME</router-link></h2>
+          <h3><router-link to="/">ABOUT</router-link></h3>
+          <h2><router-link to="/cv">CV</router-link></h2>
+          <h2><router-link to="/now">NOW</router-link></h2>
+          <h2><router-link to="/ultimate">ULTIMATE</router-link></h2>
+          <h2><router-link to="/projects">PROJECTS</router-link></h2>
           <h2>This menu is also under construction...</h2>
         </div>
       </transition>

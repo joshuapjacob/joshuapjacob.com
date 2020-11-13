@@ -15,11 +15,8 @@
         <img src="@/assets/JoshuaPaulJacob.jpg" alt="Joshua Paul Jacob" />
       </div> -->
 
-      TO INCLUDE:
-       - BIO:
-        Your education
-        Your skills and expertise
-        Your latest job or project you worked on
+      TO INCLUDE: - BIO: Your education Your skills and expertise Your latest
+      job or project you worked on
     </div>
   </div>
 </template>

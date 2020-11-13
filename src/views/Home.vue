@@ -7,9 +7,16 @@
     <preloader />
     <decorations />
     <customMenu />
-    <landing class="section" />
+    <landing class="section">
+      <div class="center">
+        <div id="full_name">
+          <div id="first_names" class="name">/ Joshua Paul</div>
+          <div id="last_name" class="name">Jacob /</div>
+        </div>
+      </div>
+    </landing>
     <about class="section" />
-    <projectHighlights class="section" />
+    <!-- <projectHighlights class="section" /> -->
   </main>
 </template>
 
@@ -35,5 +42,35 @@ export default {
 .section {
   max-width: 1600px;
   margin: auto;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAME --------------------------------------------------------------------- */
+
+#first_names {
+  -webkit-text-stroke: 1px white;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#last_name {
+  color: white;
+}
+
+.name {
+  font-family: "Alata", sans-serif;
+  font-size: 9rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size: 4rem;
+  }
 }
 </style>
