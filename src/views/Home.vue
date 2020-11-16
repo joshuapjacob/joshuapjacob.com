@@ -14,9 +14,16 @@
           <div id="last_name" class="name">Jacob /</div>
         </div>
       </div>
+      <a id="scroll-button" href="#" v-scroll-to="{el: '#about', duration: 700, easing: 'ease-in-out',}">
+        <img src="@/assets/icons/down-arrow.png" />
+      </a>
     </landing>
-    <about class="section" />
+    <about id="about" class="section" />
     <!-- <projectHighlights class="section" /> -->
+    <div class="section">
+      <h1 id="test">HELLO</h1>
+    </div>
+    <div>Designed & Built by Joshua P. Jacob (add github stats)</div>
   </main>
 </template>
 
@@ -72,5 +79,18 @@ export default {
   .name {
     font-size: 4rem;
   }
+}
+
+/* SCROLL BUTTON ------------------------------------------------------------ */
+
+#scroll-button {
+  position: absolute;
+  bottom: 50px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+#scroll-button img {
+  width: 30px;
 }
 </style>

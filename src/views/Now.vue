@@ -15,7 +15,20 @@
       Common Real-World Problems Yuval Noah Harari's Sapiens: A Brief History of
       Humankind Checkout my Goodreads page. vue-dynamic-marquee
     </p>
+
+            <figure>
+        <embed
+          src="https://wakatime.com/share/@711c15b0-f043-4685-9869-1182df23fcbb/a965aeec-599b-4a3a-b1bf-2d266be6d173.svg"
+        />
+      </figure>
+      <figure>
+        <embed
+          src="https://wakatime.com/share/@711c15b0-f043-4685-9869-1182df23fcbb/58d11274-e798-440f-ad06-038e2c329608.svg"
+        />
+      </figure>
+
   </div>
+
 </template>
 
 <script>

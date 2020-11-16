@@ -73,7 +73,7 @@ export default {
         const geometry = new PlaneGeometry(1, 1);
         const material = new MeshBasicMaterial({
           color: 0x000000,
-          opacity: 0.8,
+          opacity: 0.6,
           transparent: true,
         });
         const plane = new Mesh(geometry, material);
