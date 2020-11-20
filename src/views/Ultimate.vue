@@ -1,5 +1,11 @@
 <template>
   <div>
+    <vue-headful
+      title="Ultimate - Joshua Paul Jacob"
+      description="Joshua Paul Jacob's Ultimate List"
+    />
+    <marquees text="ULTIMATE" :duration="8" />
+
     <h1>The Ultimate List</h1>
     <p>Inspired by Joel Runyon & Thomas Frankt</p>
     <p>
@@ -14,3 +20,13 @@
     </ul>
   </div>
 </template>
+
+<script>
+import Marquees from "@/components/Marquees.vue";
+
+export default {
+  components: {
+    Marquees,
+  },
+};
+</script>

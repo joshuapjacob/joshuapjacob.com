@@ -4,20 +4,26 @@
       title="Joshua Paul Jacob"
       description="Joshua Paul Jacob's Website"
     />
-    <preloader />
-    <decorations />
-    <customMenu />
-    <landing class="section">
+
+    <marquees text="JOSHUA PAUL JACOB" :duration="17" />
+
+    <div id="welcome" class="section">
       <div class="center">
         <div id="full_name">
-          <div id="first_names" class="name">/ Joshua Paul</div>
+          <div id="first_names" title="/ Joshua Paul" class="name">/ Joshua Paul</div>
           <div id="last_name" class="name">Jacob /</div>
         </div>
       </div>
-      <a id="scroll-button" href="#" v-scroll-to="{el: '#about', duration: 700, easing: 'ease-in-out',}">
+
+      <a
+        id="scroll-button"
+        href="#"
+        v-scroll-to="{ el: '#about', duration: 700, easing: 'ease-in-out' }"
+      >
         <img src="@/assets/icons/down-arrow.png" />
       </a>
-    </landing>
+    </div>
+
     <about id="about" class="section" />
     <!-- <projectHighlights class="section" /> -->
     <div class="section">
@@ -28,35 +34,33 @@
 </template>
 
 <script>
-import Preloader from "../components/Preloader.vue";
-import Decorations from "../components/Decorations.vue";
-import CustomMenu from "../components/CustomMenu.vue";
-import Landing from "../components/home/Landing.vue";
 import About from "../components/home/About.vue";
+import Marquees from "@/components/Marquees.vue";
 
 export default {
   components: {
-    Preloader,
-    Decorations,
-    CustomMenu,
-    Landing,
     About,
+    Marquees,
   },
 };
 </script>
 
 <style>
 .section {
-  max-width: 1600px;
   margin: auto;
+}
+
+#welcome {
+  height: 100vh;
 }
 
 .center {
   display: flex;
   flex-direction: column;
+  height: 100%;
   align-items: center;
+  justify-content: center;
 }
-
 /* NAME --------------------------------------------------------------------- */
 
 #first_names {
@@ -86,11 +90,19 @@ export default {
 #scroll-button {
   position: absolute;
   bottom: 50px;
-  opacity: 0.2;
   cursor: pointer;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  filter: invert(50%);
+  transition: 0.3s ease;
+}
+
+#scroll-button:hover {
+  filter: invert(85%);
 }
 
 #scroll-button img {
-  width: 30px;
+  width: 25px;
 }
 </style>

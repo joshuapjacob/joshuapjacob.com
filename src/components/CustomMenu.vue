@@ -13,12 +13,16 @@
       </transition>
       <transition name="slide">
         <div v-if="isActive" id="sidebar-panel">
-          <h2><router-link to="/">HOME</router-link></h2>
-          <h3><router-link to="/">ABOUT</router-link></h3>
-          <h2><router-link to="/cv">CV</router-link></h2>
-          <h2><router-link to="/now">NOW</router-link></h2>
-          <h2><router-link to="/ultimate">ULTIMATE</router-link></h2>
-          <h2><router-link to="/projects">PROJECTS</router-link></h2>
+          <h2 @click="toggle"><router-link to="/">HOME</router-link></h2>
+          <h3 @click="toggle"><router-link to="/">ABOUT</router-link></h3>
+          <h2 @click="toggle"><router-link to="/cv">CV</router-link></h2>
+          <h2 @click="toggle"><router-link to="/now">NOW</router-link></h2>
+          <h2 @click="toggle">
+            <router-link to="/ultimate">ULTIMATE</router-link>
+          </h2>
+          <h2 @click="toggle">
+            <router-link to="/projects">PROJECTS</router-link>
+          </h2>
           <h2>This menu is also under construction...</h2>
         </div>
       </transition>
@@ -184,7 +188,7 @@ button:hover + p {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-enter,

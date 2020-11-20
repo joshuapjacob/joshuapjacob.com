@@ -2,7 +2,11 @@
   <div id="landing">
     <div id="darken"></div>
     <div id="canvas_container"></div>
-    <slot></slot>
+    <main>
+      <div id="content">
+        <slot></slot>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -64,7 +68,7 @@ export default {
 
       const texture = new TextureLoader().load(require("@/assets/bg.jpg"));
       const mesh = new Mesh(
-        new PlaneBufferGeometry(3 * 0.7, 2 * 0.7),
+        new PlaneBufferGeometry(3 * 0.5, 2 * 0.5),
         new MeshBasicMaterial({ map: texture })
       );
       scene.add(mesh);
@@ -132,7 +136,7 @@ export default {
             vec2 newUV = vUv;
             vec4 color = vec4(1.,0.,0.,1.);
 
-              float c = circle(newUV, uMouse, 0.0, 0.2);
+              float c = circle(newUV, uMouse, 0.0, 0.25);
               float r = texture2D(tDiffuse, newUV.xy += c * (uVelo * .5)).x;
               float g = texture2D(tDiffuse, newUV.xy += c * (uVelo * .525)).y;
               float b = texture2D(tDiffuse, newUV.xy += c * (uVelo * .55)).z;
@@ -191,11 +195,6 @@ export default {
       this.renderer.setSize(width, height);
       this.camera.aspect = width / height;
 
-      // this.camera.fov =
-      //   2 *
-      //   Math.atan(width / this.camera.aspect / (2 * this.cameraDistance)) *
-      //   (180 / Math.PI); // in degrees
-
       this.customPass.uniforms.resolution.value.y = height / width;
 
       this.camera.updateProjectionMatrix();
@@ -213,11 +212,19 @@ export default {
 </script>
 
 <style scoped>
+#content {
+  padding: 0 10vw;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #landing {
   background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100vw;
 }

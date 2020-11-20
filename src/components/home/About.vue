@@ -1,5 +1,7 @@
 <template>
   <div id="about" class="section">
+
+    <h1>About Me</h1>
     <p>I'm 19 years old. I live in Paris, France. I'm Indian.</p>
     <p>
       (PERSONALITY) I love learning and discovering new things. I like design
@@ -7,8 +9,10 @@
       bridging the gap between engineering and design — combining my technical
       knowledge with my keen eye for design to create a beautiful product. or
       crossing off another item on my ultimate (bucket) list. I'm a
-      perfectionist
+      perfectionist. I like to create. More than anything, I want to make lots of stuff. I want to make articles, books, websites, music, companies, systems, apps, and especially new ideas.
     </p>
+
+    <p>I'm afraid of heights...</p>
 
     <p>I have visited 25 countries.</p>
     <!-- https://support.google.com/mymaps/answer/3024454?hl=en&amp;ref_topic=3188329 -->
@@ -30,6 +34,8 @@
       Tamil. I'm trying to pick up some Arabic through
       <a href="https://www.duolingo.com/profile/joshuapjacob">Duolingo</a>.
     </p>
+
+    <p>Astrology: no.</p>
 
     <p>
       (STUDENT STUFF) I'm a final-year bachelor student at
@@ -116,9 +122,9 @@
       >.
     </p>
 
-    <!-- <p>Some of my favorite artists are: Kanye West, Daft Punk, MF DOOM, Sacha Baron Cohen,</p> -->
+    <p><router-link to="/now">NOW</router-link> AND ULTIMATE</p>
 
-    <p>NOW AND ULTIMATE</p>
+    <div id="test"></div>
 
     <p>Feel free to get in touch! My inbox is always open.</p>
     <div id="under_construction">
@@ -129,12 +135,7 @@
       >
         &lt; {{ $t("underConstruction.sourceCode") }} /&gt;
       </a>
-      <!-- <div id="img_container">
-        <div id="img_decoration"></div>
 
-        who am i
-        <img src="@/assets/JoshuaPaulJacob.jpg" alt="Joshua Paul Jacob" />
-      </div> -->
 
       TO INCLUDE: - BIO: Your education Your skills and expertise Your latest
       job or project you worked on
@@ -150,23 +151,10 @@ export default {
 
 <style scoped>
 #about {
-  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-}
-
-a {
-  text-decoration: none;
-  color: gray;
-  font-weight: lighter;
-  transition: 0.3s ease-in-out;
-}
-
-a:hover {
-  color: lightgray;
 }
 
 h2 {

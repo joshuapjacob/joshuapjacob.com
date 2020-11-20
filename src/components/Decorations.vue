@@ -25,17 +25,23 @@
           ><img src="@/assets/icons/linkedin-brands.svg"
         /></a>
         <a
+          href="https://t.me/joshuapjacob"
+          target="_blank"
+          title="Telegram "
+          ><img src="@/assets/icons/telegram-plane-brands.svg"
+        /></a>
+        <a
           href="https://github.com/joshuapjacob/"
           target="_blank"
           title="GitHub "
           ><img src="@/assets/icons/github-brands.svg"
         /></a>
-        <a
+        <!-- <a
           href="https://www.youtube.com/user/lrccomedy"
           target="_blank"
           title="YouTube "
           ><img src="@/assets/icons/youtube-brands.svg"
-        /></a>
+        /></a> -->
         <a
           href="https://www.goodreads.com/user/show/57891424-joshua-paul-jacob"
           target="_blank"
@@ -95,7 +101,7 @@ export default {
   top: 0;
   margin: 3vw;
   color: grey;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   transform: translateX(3px);
   font-weight: 300;
@@ -142,7 +148,7 @@ export default {
 a {
   text-decoration: none;
   color: grey;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.3rem;
   font-weight: 300;
   margin: 10px;

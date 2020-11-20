@@ -11,18 +11,28 @@ const routes = [
   },
   {
     path: "/",
-    name: "Home",
+    name: "JOSHUA-PAUL-JACOB",
     component: Home,
   },
   {
     path: "/now",
-    name: "Now",
+    name: "NOW",
     component: () => import("@/views/Now.vue"),
+  },
+  {
+    path: "/ultimate",
+    name: "Ultimate",
+    component: () => import("@/views/Ultimate.vue"),
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+    component: () => import("@/views/Projects.vue"),
   },
   {
     path: "/cv",
     name: "CV",
-    component: () => import("../views/CV.vue"),
+    component: () => import("@/views/CV.vue"),
   },
 ];
 
