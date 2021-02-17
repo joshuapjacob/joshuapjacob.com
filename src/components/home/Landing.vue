@@ -225,8 +225,8 @@ main {
 
 #landing {
   background: none;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
 }
 
 #darken {

@@ -2,7 +2,7 @@
   <div id="about" class="section">
 
     <h1>About Me</h1>
-    <p>I'm 19 years old. I live in Paris, France. I'm Indian.</p>
+    <p>I'm 20.000120312 years old. I live in Paris, France. I'm Indian.</p>
     <p>
       (PERSONALITY) I love learning and discovering new things. I like design
       and technology that's involed in design (web dev, etc) marketing. I enjoy

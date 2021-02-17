@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import About from "../components/home/About.vue";
+import About from "@/components/home/About.vue";
 import Marquees from "@/components/Marquees.vue";
 
 export default {

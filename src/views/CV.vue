@@ -66,7 +66,7 @@
             <h3>
               Centre de Mathématiques Appliquées – École Polytechnique (CMAP)
             </h3>
-            <h4>Financial Mathematics Research Intern</h4>
+            <h4>Research Intern – Financial Mathematics</h4>
           </div>
           <div class="secondary">
             <h3>Palaiseau, France</h3>

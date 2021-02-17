@@ -13,17 +13,16 @@
       </transition>
       <transition name="slide">
         <div v-if="isActive" id="sidebar-panel">
-          <h2 @click="toggle"><router-link to="/">HOME</router-link></h2>
-          <h3 @click="toggle"><router-link to="/">ABOUT</router-link></h3>
-          <h2 @click="toggle"><router-link to="/cv">CV</router-link></h2>
-          <h2 @click="toggle"><router-link to="/now">NOW</router-link></h2>
+          <h2 @click="toggle"><router-link to="/"><div class="test"></div><span>00</span> HOME</router-link></h2>
+          <h3 @click="toggle"><router-link to="/">00.1 ABOUT</router-link></h3>
+          <h2 @click="toggle"><router-link to="/cv">01 CV</router-link></h2>
+          <h2 @click="toggle"><router-link to="/now">02 NOW</router-link></h2>
           <h2 @click="toggle">
-            <router-link to="/ultimate">ULTIMATE</router-link>
+            <router-link to="/ultimate">03 ULTIMATE</router-link>
           </h2>
           <h2 @click="toggle">
-            <router-link to="/projects">PROJECTS</router-link>
+            <router-link to="/projects">04 PROJECTS</router-link>
           </h2>
-          <h2>This menu is also under construction...</h2>
         </div>
       </transition>
     </div>
@@ -99,23 +98,6 @@ button:focus {
   background-color: lightgrey;
 }
 
-/*
-#burger.active .burger-button {
-  transform: rotate(-180deg);
-}
-
-#burger.active .burger-bar {
-  background-color: lightgrey;
-}
-
-#burger.active #burger-bar--1 {
-  transform: translateY(-2px) rotate(45deg);
-}
-
-#burger.active #burger-bar--2 {
-  transform: translateY(-2px) rotate(-45deg);
-} */
-
 /* BURGER "MENU" HINT ------------------------------------------------------- */
 
 p {
@@ -148,7 +130,7 @@ button:hover + p {
 
 #sidebar-panel {
   overflow-y: auto;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   right: 0;
   top: 0;
@@ -156,21 +138,47 @@ button:hover + p {
   z-index: 99;
   padding: 3rem 20px 2rem 20px;
   width: 80vw;
-  color: black;
+  color: white;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
   justify-content: center;
   box-shadow: -20px 0px 80px 0px rgba(0, 0, 0, 0.75);
+}
+
+#sidebar-panel h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  height: 10px;
+  width: 0.1%;
+  background: gray;
+  opacity: 0.5;
+  transition: width 0.8s ease;
+  z-index: -1;
+}
+
+#sidebar-panel h2:hover::before,
+#sidebar-panel h2:active::before {
+  width: 45%;
+}
+
+#sidebar-panel h2 {
+  position: relative;
+  font-weight: 900;
+  font-size: 80px;
+}
+
+#sidebar-panel h2 span {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 600px) {
   #sidebar-panel {
     width: 100vw;
   }
-}
-
-#sidebar-panel h2 {
-  font-weight: normal;
 }
 
 /* TRANSITIONS -------------------------------------------------------------- */
