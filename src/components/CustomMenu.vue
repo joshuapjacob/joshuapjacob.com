@@ -13,13 +13,12 @@
       </transition>
       <transition name="slide">
         <div v-if="isActive" id="sidebar-panel">
-          <h2 @click="toggle"><router-link to="/"><div class="test"></div><span>00</span> HOME</router-link></h2>
+          <h2 @click="toggle">
+            <router-link to="/"><span>00</span> HOME</router-link>
+          </h2>
           <h3 @click="toggle"><router-link to="/">00.1 ABOUT</router-link></h3>
           <h2 @click="toggle"><router-link to="/cv">01 CV</router-link></h2>
           <h2 @click="toggle"><router-link to="/now">02 NOW</router-link></h2>
-          <h2 @click="toggle">
-            <router-link to="/ultimate">03 ULTIMATE</router-link>
-          </h2>
           <h2 @click="toggle">
             <router-link to="/projects">04 PROJECTS</router-link>
           </h2>
@@ -120,7 +119,7 @@ button:hover + p {
 /* SIDEBAR MENU ------------------------------------------------------------- */
 
 #sidebar-backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -137,7 +136,7 @@ button:hover + p {
   height: 100vh;
   z-index: 99;
   padding: 3rem 20px 2rem 20px;
-  width: 80vw;
+  width: 40vw;
   color: white;
   display: flex;
   /* align-items: center; */
@@ -146,29 +145,16 @@ button:hover + p {
   box-shadow: -20px 0px 80px 0px rgba(0, 0, 0, 0.75);
 }
 
-#sidebar-panel h2::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 12%;
-  height: 10px;
-  width: 0.1%;
-  background: gray;
-  opacity: 0.5;
-  transition: width 0.8s ease;
-  z-index: -1;
-}
-
-#sidebar-panel h2:hover::before,
-#sidebar-panel h2:active::before {
-  width: 45%;
-}
-
 #sidebar-panel h2 {
   position: relative;
   font-weight: 900;
   font-size: 80px;
+}
+
+#sidebar-panel h3 {
+  position: relative;
+  font-weight: 900;
+  font-size: 40px;
 }
 
 #sidebar-panel h2 span {

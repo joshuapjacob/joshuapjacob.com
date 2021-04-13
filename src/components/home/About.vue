@@ -1,6 +1,5 @@
 <template>
   <div id="about" class="section">
-
     <h1>About Me</h1>
     <p>I'm 20.000120312 years old. I live in Paris, France. I'm Indian.</p>
     <p>
@@ -9,7 +8,9 @@
       bridging the gap between engineering and design — combining my technical
       knowledge with my keen eye for design to create a beautiful product. or
       crossing off another item on my ultimate (bucket) list. I'm a
-      perfectionist. I like to create. More than anything, I want to make lots of stuff. I want to make articles, books, websites, music, companies, systems, apps, and especially new ideas.
+      perfectionist. I like to create. More than anything, I want to make lots
+      of stuff. I want to make articles, books, websites, music, companies,
+      systems, apps, and especially new ideas.
     </p>
 
     <p>I'm afraid of heights...</p>
@@ -135,7 +136,6 @@
       >
         &lt; {{ $t("underConstruction.sourceCode") }} /&gt;
       </a>
-
 
       TO INCLUDE: - BIO: Your education Your skills and expertise Your latest
       job or project you worked on

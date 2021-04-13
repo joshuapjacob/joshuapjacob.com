@@ -31,13 +31,14 @@ body {
 
 a {
   text-decoration: none;
-  color: gray;
-  font-weight: lighter;
-  transition: 0.3s ease-in-out;
+  color: lightgray;
+  transition: 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: lightgray;
+  color: white;
+  border-color: white;
 }
 
 /* .fade-enter-active,

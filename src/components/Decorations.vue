@@ -24,10 +24,7 @@
           title="LinkedIn "
           ><img src="@/assets/icons/linkedin-brands.svg"
         /></a>
-        <a
-          href="https://t.me/joshuapjacob"
-          target="_blank"
-          title="Telegram "
+        <a href="https://t.me/joshuapjacob" target="_blank" title="Telegram "
           ><img src="@/assets/icons/telegram-plane-brands.svg"
         /></a>
         <a

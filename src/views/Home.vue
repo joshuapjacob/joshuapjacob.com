@@ -10,7 +10,9 @@
     <div id="welcome" class="section">
       <div class="center">
         <div id="full_name">
-          <div id="first_names" title="/ Joshua Paul" class="name">/ Joshua Paul</div>
+          <div id="first_names" title="/ Joshua Paul" class="name">
+            / Joshua Paul
+          </div>
           <div id="last_name" class="name">Jacob /</div>
         </div>
       </div>

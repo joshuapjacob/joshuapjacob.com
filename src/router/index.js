@@ -19,11 +19,11 @@ const routes = [
     name: "NOW",
     component: () => import("@/views/Now.vue"),
   },
-  {
-    path: "/ultimate",
-    name: "Ultimate",
-    component: () => import("@/views/Ultimate.vue"),
-  },
+  // {
+  //   path: "/ultimate",
+  //   name: "Ultimate",
+  //   component: () => import("@/views/Ultimate.vue"),
+  // },
   {
     path: "/projects",
     name: "Projects",
