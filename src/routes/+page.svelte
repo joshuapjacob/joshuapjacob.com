@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Name from '$lib/components/Name.svelte';
+	import Canvas from '$lib/components/Canvas.svelte';
+	import Decorations from '$lib/components/Decorations.svelte';
+	import Marquees from '$lib/components/Marquees.svelte';
+</script>
+
+<Name />
+<Canvas />
+<Decorations />
+<Marquees />
