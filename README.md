@@ -1,4 +1,4 @@
-# [joshuapjacob.com](https://kit.svelte.dev/)
+# [joshuapjacob.com](https://joshuapjacob.com/)
 
 Joshua P. Jacob's personal website. Built with [SvelteKit](https://kit.svelte.dev/).
 
