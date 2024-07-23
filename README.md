@@ -20,3 +20,9 @@ npm run dev
 docker build . -t personal-website
 docker run -p 3000:3000 -it personal-website
 ```
+
+## Production
+
+```bash
+bash deploy.sh
+```
