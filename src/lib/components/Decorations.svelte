@@ -113,7 +113,8 @@
 
 		.decor {
 			width: 100vw;
-			margin: 75vh 0;
+			margin: 70vh 0 0 0;
+			height: auto;
 		}
 
 		.social {
