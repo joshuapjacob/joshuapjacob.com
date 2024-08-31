@@ -1,6 +1,6 @@
 # [joshuapjacob.com](https://joshuapjacob.com/)
 
-Joshua P. Jacob's personal website. Built with [SvelteKit](https://kit.svelte.dev/).
+Joshua P. Jacob's personal website. Built with [SvelteKit](https://kit.svelte.dev/) and [Three.js](https://threejs.org/).
 
 ## Project Setup
 

@@ -15,9 +15,21 @@
 		justify-content: center;
 	}
 
+	@keyframes fadeInUp {
+		0% {
+			transform: translateY(10%);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0%);
+			opacity: 1;
+		}
+	}
+
 	.name {
 		font-size: 10em;
 		color: white;
+		animation: 2s fadeInUp;
 	}
 	@media screen and (max-width: 1000px) {
 		.name {

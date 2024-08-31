@@ -1,7 +1,7 @@
 <script>
-	export let duration = 100;
+	export let duration = 40;
 	export let repeat = 10;
-	export let text = '<<<<<<<';
+	export let text = '""""""""""';
 </script>
 
 <div class="container left noselect">

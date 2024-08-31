@@ -125,7 +125,6 @@
 		camera.position.z = 1;
 
 		let scale = 0.8;
-
 		let mesh = new Mesh(
 			new PlaneGeometry(3 * scale, 2 * scale),
 			new MeshBasicMaterial({ map: new TextureLoader().load('bg.jpg') })
@@ -155,6 +154,7 @@
 
 		document.addEventListener('mousemove', handleMouse);
 		window.addEventListener('resize', handleResize);
+		container.style.opacity = '1';
 		animate();
 	});
 </script>
@@ -185,5 +185,7 @@
 		z-index: -2;
 		left: 0;
 		top: 0;
+		opacity: 0; /* Modified by JS when ready. */
+		transition: all 2s;
 	}
 </style>
