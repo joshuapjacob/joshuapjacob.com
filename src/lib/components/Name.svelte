@@ -40,6 +40,7 @@
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			height: 50%;
 		}
 	}
 

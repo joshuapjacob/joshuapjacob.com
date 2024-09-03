@@ -113,7 +113,7 @@
 
 		.decor {
 			width: 100vw;
-			margin: 70vh 0 0 0;
+			margin: 100% 0 0 0;
 			height: auto;
 		}
 
